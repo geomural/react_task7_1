@@ -1,39 +1,5 @@
 import React, {useState} from 'react';
-import moment from 'moment';
-
-function DateTime(props) {
-    return (
-        <p className="date">{props.date}</p>
-    )
-}
-
-function DateTimePretty(props) {
-  let diff = moment.duration(moment().diff(moment(props.date)));
-  let info = "";
-
-  if (diff.asHours() < 1) {
-    info = `${diff.asMinutes().toFixed(0)} минут назад`;
-  } else if (diff.asHours() > 24) {
-    info = `${diff.asDays().toFixed(0)} дней назад`;
-  } else {
-    info = `${diff.asHours().toFixed(0)} часов назад`;
-  }
-  
-  return <DateTime date={info} />;
-}
-
-function Video(props) {
-    return (
-        <div className="video">
-            <iframe src={props.url} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-            <DateTimePretty date={props.date} />
-        </div>
-    )
-}
-
-function VideoList(props) {
-    return props.list.map(item => <Video url={item.url} date={item.date} />);
-}
+import VideoList from './components/VideoList'
 
 export default function App() {
     const [list, setList] = useState([
