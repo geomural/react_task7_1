@@ -20,4 +20,4 @@
 
 Для работы с датой и временем можете воспользоваться библиотекой momentjs.
 
-https://github.com/netology-code/ra16-homeworks/tree/master/hoc/time
+<i>Исходное задание: https://github.com/netology-code/ra16-homeworks/tree/master/hoc/time </i>
